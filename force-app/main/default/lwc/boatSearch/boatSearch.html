@@ -4,6 +4,7 @@
         <lightning-layout-item size="12">
             <lightning-card title="Find a Boat">
                 <!-- New Boat button goes here -->
+                <lightning-button variant="brand" label="New Boat" title="Primary action" onclick={createNewBoat} class="slds-m-left_x-small"></lightning-button>
                 <p class="slds-var-p-horizontal_small">
                     <!-- boatSearchForm component goes here -->
                 </p>
@@ -13,11 +14,13 @@
         <lightning-layout-item size="12" class="slds-p-top_small slds-is-relative">
             <!-- Spinner goes here -->
 
-            <div if:true={isLoading} class="demo-only demo-only_viewport" style="height: 6rem; position: relative">
-                <div role="status" class="slds-spinner slds-spinner_medium">
-                    <span class="slds-assistive-text">Loading</span>
-                    <div class="slds-spinner__dot-a"></div>
-                    <div class="slds-spinner__dot-b"></div>
+            <div if:true={isLoading} class="demo-only" style="height: 6rem; position: relative">
+                <div class="slds-spinner_container">
+                    <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
                 </div>
             </div>
             <!-- boatSearchResults goes here -->
