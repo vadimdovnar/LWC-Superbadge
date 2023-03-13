@@ -1,12 +1,19 @@
 <template>
     <lightning-layout multiple-rows>
         <!-- Top -->
-        <lightning-layout-item size="12">
+        <lightning-layout-item size="12" class="slds-text-align_left">
             <lightning-card title="Find a Boat">
                 <!-- New Boat button goes here -->
-                <lightning-button variant="brand" label="New Boat" title="Primary action" onclick={createNewBoat} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button
+                    variant="Neutral"
+                    label="New Boat"
+                    title="Primary action"
+                    onclick={createNewBoat}
+                    class="slds-m-left_x-small"
+                ></lightning-button>
                 <p class="slds-var-p-horizontal_small">
                     <!-- boatSearchForm component goes here -->
+                    <c-boat-search-form></c-boat-search-form>
                 </p>
             </lightning-card>
         </lightning-layout-item>
